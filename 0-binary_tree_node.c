@@ -18,9 +18,10 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
     /**
      * Check if memory allocation failed
      */
-	if (new_node == NULL) {
-        return NULL;
-    }
+	if (new_node == NULL)
+	{
+		return (NULL);
+	}
 
     /**
      *  Set the new node data and initialize child pointers to NULL
@@ -28,7 +29,7 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 	new_node->n = value;
 	new_node->left = NULL;
 	new_node->right = NULL;
-	
+
 	/**
 	 * Parent information is stored
 	 */
