@@ -72,3 +72,106 @@ int main() {
     }
     return 0;
 }
+```
+
+### 'binary_tree_insert_right'
+Insert a node as the right child of another node.
+```c
+#include "binary_tree.h"
+#include <stdio.h>
+
+int main() {
+    binary_tree_t *parent = binary_tree_node(NULL, 10);
+    if (parent != NULL) {
+        binary_tree_t *right_child = binary_tree_insert_right(parent, 15);
+        if (right_child != NULL) {
+            printf("Inserted right child with value: %d\n", right_child->n);
+        }
+    }
+    return 0;
+}
+```
+
+### 'binary_tree_delete'
+Delete an entire binary tree.
+```c
+#include "binary_tree.h"
+#include <stdio.h>
+
+int main() {
+    binary_tree_t *root = binary_tree_node(NULL, 10);
+    if (root != NULL) {
+        binary_tree_t *left_child = binary_tree_insert_left(root, 5);
+        binary_tree_t *right_child = binary_tree_insert_right(root, 15);
+
+        printf("Deleting binary tree...\n");
+        binary_tree_delete(root);
+        printf("Binary tree deleted\n");
+    }
+    return 0;
+}
+```
+
+### 'binary_tree_is_leaf'
+Check if a given node is a leaf.
+```c
+#include "binary_tree.h"
+#include <stdio.h>
+
+int main() {
+    binary_tree_t *leaf = binary_tree_node(NULL, 10);
+    if (leaf != NULL) {
+        if (binary_tree_is_leaf(leaf)) {
+            printf("Node is a leaf\n");
+        } else {
+            printf("Node is not a leaf\n");
+        }
+    }
+    return 0;
+}
+```
+
+### 'binary_tree_is_root'
+Check if a given node is a root
+```c
+#include "binary_tree.h"
+#include <stdio.h>
+
+int main() {
+    binary_tree_t *root = binary_tree_node(NULL, 10);
+    if (root != NULL) {
+        if (binary_tree_is_root(root)) {
+            printf("Node is a root\n");
+        } else {
+            printf("Node is not a root\n");
+        }
+    }
+    return 0;
+}
+```
+
+### 'binary_tree_preorder
+Traverse a binary tree using pre-order traversal.
+```c
+#include "binary_tree.h"
+#include <stdio.h>
+
+void print_node_value(int value) {
+    printf("%d ", value);
+}
+
+int main() {
+    binary_tree_t *root = binary_tree_node(NULL, 10);
+    if (root != NULL) {
+        binary_tree_t *left_child = binary_tree_insert_left(root, 5);
+        binary_tree_t *right_child = binary_tree_insert_right(root, 15);
+
+        printf("Pre-order traversal: ");
+        binary_tree_preorder(root, print_node_value);
+        printf("\n");
+    }
+    return 0;
+}
+```
+
+### 
