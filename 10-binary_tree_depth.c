@@ -16,7 +16,7 @@ if (tree == NULL)
 while (tree->parent != NULL)
 {
 depth++;
-tree = tree-> parent;
+tree = tree->parent;
 }
 return (depth);
 }
