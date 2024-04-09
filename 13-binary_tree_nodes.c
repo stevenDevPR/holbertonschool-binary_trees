@@ -22,11 +22,11 @@ nodes += binary_tree_nodes(tree->right);
 }
 else
 {
-     
+
 nodes += binary_tree_nodes(tree->left);
 nodes += binary_tree_nodes(tree->right);
 }
 
-return nodes;
+return (nodes);
 }
 
