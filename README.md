@@ -40,7 +40,7 @@ To use this custom printf function in your C project, follow these steps:
 
 Here are some examples of how to use any of the binary trees functions.
 
-'binary_tree_node'
+### 'binary_tree_node'
 
 ```c
 #include "binary_tree.h"
@@ -54,7 +54,7 @@ int main() {
     return 0;
 }
 
-'binary_tree_insert_left'
+### 'binary_tree_insert_left'
 
 '''c
 #include "binary_tree.h"
