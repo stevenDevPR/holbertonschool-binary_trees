@@ -54,7 +54,7 @@ int main() {
     return 0;
 }
 
-### 'binary_tree_insert_left'
+binary_tree_insert_left
 
 '''c
 #include "binary_tree.h"
