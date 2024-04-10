@@ -28,15 +28,15 @@ int is_perfect_recursive(const binary_tree_t *tree, int d, int level)
     if (tree == NULL)
         return 1;
 
-    // If leaf node
+
     if (tree->left == NULL && tree->right == NULL)
         return (d == level + 1);
 
-    // If internal node and one child is missing
+
     if (tree->left == NULL || tree->right == NULL)
         return 0;
 
-    // Check recursively for every node
+
     return is_perfect_recursive(tree->left, d, level + 1) &&
            is_perfect_recursive(tree->right, d, level + 1);
 }
